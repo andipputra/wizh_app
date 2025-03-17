@@ -1,0 +1,1 @@
+enum TripType { open, private }

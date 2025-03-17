@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Bali Adventure",
+    "price": 150.0,
+    "rating": 4.8,
+    "tripType": "open",
+    "summary": "Explore the beauty of Bali with this adventurous trip.",
+    "photos": [
+      "https://example.com/bali1.jpg",
+      "https://example.com/bali2.jpg"
+    ],
+    "includes": ["Accommodation", "Meals", "Tour Guide"],
+    "excludes": ["Flight Tickets", "Personal Expenses"],
+    "termsAndConditions": "Non-refundable, rescheduling allowed within 7 days.",
+    "totalPax": 10,
+    "reviews": [
+      {
+        "reviewerName": "Alice",
+        "rating": 5.0,
+        "comment": "Amazing experience, highly recommended!",
+        "date": "2024-03-01"
+      },
+      {
+        "reviewerName": "Bob",
+        "rating": 4.5,
+        "comment": "Great value for money.",
+        "date": "2024-02-20"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mount Bromo Sunrise Tour",
+    "price": 120.0,
+    "rating": 4.7,
+    "tripType": "private",
+    "summary": "Witness the majestic sunrise at Mount Bromo.",
+    "photos": [
+      "https://example.com/bromo1.jpg",
+      "https://example.com/bromo2.jpg"
+    ],
+    "includes": ["Transport", "Guide", "Entrance Fee"],
+    "excludes": ["Meals", "Insurance"],
+    "termsAndConditions": "Cancellation allowed up to 48 hours before.",
+    "totalPax": 8,
+    "reviews": [
+      {
+        "reviewerName": "Charlie",
+        "rating": 4.8,
+        "comment": "Breathtaking view and well-organized tour.",
+        "date": "2024-02-18"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Komodo Island Exploration",
+    "price": 300.0,
+    "rating": 4.9,
+    "tripType": "open",
+    "summary": "Discover the wonders of Komodo Island and its dragons.",
+    "photos": [
+      "https://example.com/komodo1.jpg",
+      "https://example.com/komodo2.jpg"
+    ],
+    "includes": ["Boat Ride", "Meals", "Park Entrance"],
+    "excludes": ["Flight", "Personal Equipment"],
+    "termsAndConditions": "Booking closes 14 days before departure.",
+    "totalPax": 12,
+    "reviews": [
+      {
+        "reviewerName": "Dana",
+        "rating": 5.0,
+        "comment": "A once-in-a-lifetime experience!",
+        "date": "2024-01-30"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Yogyakarta Cultural Trip",
+    "price": 100.0,
+    "rating": 4.6,
+    "tripType": "private",
+    "summary": "Immerse yourself in the rich culture of Yogyakarta.",
+    "photos": [
+      "https://example.com/yogyakarta1.jpg",
+      "https://example.com/yogyakarta2.jpg"
+    ],
+    "includes": ["Cultural Guide", "Meals", "Museum Tickets"],
+    "excludes": ["Accommodation"],
+    "termsAndConditions": "Full refund up to 5 days before the trip.",
+    "totalPax": 15,
+    "reviews": [
+      {
+        "reviewerName": "Eva",
+        "rating": 4.5,
+        "comment": "Informative and engaging tour.",
+        "date": "2024-02-05"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Raja Ampat Diving Expedition",
+    "price": 500.0,
+    "rating": 4.9,
+    "tripType": "open",
+    "summary": "Dive into the pristine waters of Raja Ampat.",
+    "photos": [
+      "https://example.com/rajaampat1.jpg",
+      "https://example.com/rajaampat2.jpg"
+    ],
+    "includes": ["Diving Gear", "Accommodation", "Meals"],
+    "excludes": ["Flight", "Insurance"],
+    "termsAndConditions": "Requires diving certification.",
+    "totalPax": 6,
+    "reviews": [
+      {
+        "reviewerName": "Frank",
+        "rating": 5.0,
+        "comment": "Unmatched marine biodiversity!",
+        "date": "2024-01-15"
+      }
+    ]
+  }
+]

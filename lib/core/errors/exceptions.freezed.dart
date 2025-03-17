@@ -76,8 +76,8 @@ as String?,
 /// @nodoc
 
 
-class ServerException implements AppException {
-  const ServerException({this.message});
+class ServerException extends AppException {
+  const ServerException({this.message}): super._();
   
 
 @override final  String? message;
@@ -142,8 +142,8 @@ as String?,
 /// @nodoc
 
 
-class CacheException implements AppException {
-  const CacheException({this.message});
+class CacheException extends AppException {
+  const CacheException({this.message}): super._();
   
 
 @override final  String? message;
@@ -208,8 +208,8 @@ as String?,
 /// @nodoc
 
 
-class NetworkException implements AppException {
-  const NetworkException({this.message});
+class NetworkException extends AppException {
+  const NetworkException({this.message}): super._();
   
 
 @override final  String? message;
@@ -274,8 +274,8 @@ as String?,
 /// @nodoc
 
 
-class UnknownException implements AppException {
-  const UnknownException({this.message});
+class UnknownException extends AppException {
+  const UnknownException({this.message}): super._();
   
 
 @override final  String? message;
