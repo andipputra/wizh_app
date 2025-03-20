@@ -15,6 +15,8 @@ TripServices tripServices(Ref ref) => TripServices();
 class TripServices {
   Future<List<TripModel>> allTrips() async {
     try {
+      await Future.delayed(Duration(seconds: 5));
+
       return await _loadFromLocal();
     } catch (e) {
       throw AppException.unknown(message: e.toString());
@@ -23,6 +25,8 @@ class TripServices {
 
   Future<TripModel> tripDetails(int id) async {
     try {
+      await Future.delayed(Duration(seconds: 5));
+
       final listTripModel = await _loadFromLocal();
 
       final tripDetail = listTripModel.firstWhereOrNull(
@@ -43,10 +47,10 @@ class TripServices {
     try {
       final listTripModel = <TripModel>[];
 
-      final jsonString = await rootBundle.loadString('assets/data/user.json');
-      final jsonMap = json.decode(jsonString) as List<Map<String, dynamic>>;
+      final jsonString = await rootBundle.loadString('assets/mocks/trips.json');
+      final jsonMap = json.decode(jsonString);
 
-      if (jsonMap.isNotEmpty) {
+      if (jsonMap is List && jsonMap.isNotEmpty) {
         listTripModel.addAll(jsonMap.map((e) => TripModel.fromJson(e)));
       }
 

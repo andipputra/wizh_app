@@ -2,13 +2,14 @@
   {
     "id": 1,
     "title": "Bali Adventure",
-    "price": 150.0,
+    "price": 750000,
     "rating": 4.8,
     "tripType": "open",
     "summary": "Explore the beauty of Bali with this adventurous trip.",
     "photos": [
-      "https://example.com/bali1.jpg",
-      "https://example.com/bali2.jpg"
+      "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFsaXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJhbGl8ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1552301726-570d51466ae2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGJhbGl8ZW58MHx8MHx8fDA%3D"
     ],
     "includes": ["Accommodation", "Meals", "Tour Guide"],
     "excludes": ["Flight Tickets", "Personal Expenses"],
@@ -32,13 +33,14 @@
   {
     "id": 2,
     "title": "Mount Bromo Sunrise Tour",
-    "price": 120.0,
+    "price": 250000,
     "rating": 4.7,
     "tripType": "private",
     "summary": "Witness the majestic sunrise at Mount Bromo.",
     "photos": [
-      "https://example.com/bromo1.jpg",
-      "https://example.com/bromo2.jpg"
+      "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=3571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1637292872273-1fc99340ac04?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YnJvbW98ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1620339478629-7f0a3fac877d?q=80&w=2765&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
     "includes": ["Transport", "Guide", "Entrance Fee"],
     "excludes": ["Meals", "Insurance"],
@@ -56,13 +58,14 @@
   {
     "id": 3,
     "title": "Komodo Island Exploration",
-    "price": 300.0,
+    "price": 2000000,
     "rating": 4.9,
     "tripType": "open",
     "summary": "Discover the wonders of Komodo Island and its dragons.",
     "photos": [
-      "https://example.com/komodo1.jpg",
-      "https://example.com/komodo2.jpg"
+      "https://images.unsplash.com/photo-1571366343168-631c5bcca7a4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a29tb2RvJTIwaXNsYW5kfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1660280274563-767dd6b56374?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGtvbW9kbyUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1565369728672-523bc7e59df2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGtvbW9kbyUyMGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D"
     ],
     "includes": ["Boat Ride", "Meals", "Park Entrance"],
     "excludes": ["Flight", "Personal Equipment"],
@@ -80,13 +83,14 @@
   {
     "id": 4,
     "title": "Yogyakarta Cultural Trip",
-    "price": 100.0,
+    "price": 100000,
     "rating": 4.6,
     "tripType": "private",
     "summary": "Immerse yourself in the rich culture of Yogyakarta.",
     "photos": [
-      "https://example.com/yogyakarta1.jpg",
-      "https://example.com/yogyakarta2.jpg"
+      "https://images.unsplash.com/photo-1552035191-f10bd9fbf35e?q=80&w=2992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1602057512587-76d5cc4b34e2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8eW9neWFrYXJ0YXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1631002164896-004e2058d6e4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHlvZ3lha2FydGF8ZW58MHx8MHx8fDA%3D"
     ],
     "includes": ["Cultural Guide", "Meals", "Museum Tickets"],
     "excludes": ["Accommodation"],
@@ -104,13 +108,13 @@
   {
     "id": 5,
     "title": "Raja Ampat Diving Expedition",
-    "price": 500.0,
+    "price": 15000000,
     "rating": 4.9,
     "tripType": "open",
     "summary": "Dive into the pristine waters of Raja Ampat.",
     "photos": [
-      "https://example.com/rajaampat1.jpg",
-      "https://example.com/rajaampat2.jpg"
+      "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFqYSUyMGFtcGF0fGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1650509009946-32b00cb21a0a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFqYSUyMGFtcGF0fGVufDB8fDB8fHww"
     ],
     "includes": ["Diving Gear", "Accommodation", "Meals"],
     "excludes": ["Flight", "Insurance"],
