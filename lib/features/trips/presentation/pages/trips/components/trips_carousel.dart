@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:whiz_trips/config/routers/app_routes.gr.dart';
 import 'package:whiz_trips/features/trips/presentation/controllers/trips_carousel_controller.dart';
 import 'package:whiz_trips/features/trips/presentation/controllers/trips_controller.dart';
 
@@ -38,37 +40,40 @@ class TripsCarousel extends ConsumerWidget {
             itemBuilder: (context, index) {
               final currentTrips = tripsCarouselController.trips[index];
 
-              return Container(
-                margin: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(
-                    image: NetworkImage(currentTrips.photos.first),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                alignment: Alignment.bottomCenter,
+              return InkWell(
+                onTap: () => context.pushRoute(TripsDetailRoute(trip: currentTrips)),
                 child: Container(
-                  padding: EdgeInsets.all(8),
-                  width: double.infinity,
+                  margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.white.withAlpha(100),
-                        Colors.white.withAlpha(90),
-                        Colors.white.withAlpha(80),
-                        Colors.white.withAlpha(70),
-                      ],
-                      end: Alignment.topCenter,
-                      begin: Alignment.bottomCenter,
+                    borderRadius: BorderRadius.circular(8),
+                    image: DecorationImage(
+                      image: NetworkImage(currentTrips.photos.first),
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  child: Text(
-                    currentTrips.title,
-                    style: TextTheme.of(
-                      context,
-                    ).labelLarge?.copyWith(fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    padding: EdgeInsets.all(8),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.white.withAlpha(100),
+                          Colors.white.withAlpha(90),
+                          Colors.white.withAlpha(80),
+                          Colors.white.withAlpha(70),
+                        ],
+                        end: Alignment.topCenter,
+                        begin: Alignment.bottomCenter,
+                      ),
+                    ),
+                    child: Text(
+                      currentTrips.title,
+                      style: TextTheme.of(
+                        context,
+                      ).labelLarge?.copyWith(fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
               );

@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: AppBarTheme(),
       ),
       routerDelegate: AutoRouterDelegate(_appRoute),
       routeInformationParser: _appRoute.defaultRouteParser(),
