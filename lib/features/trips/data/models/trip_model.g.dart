@@ -17,9 +17,11 @@ _TripModel _$TripModelFromJson(Map<String, dynamic> json) => _TripModel(
       (json['photos'] as List<dynamic>?)?.map((e) => e as String).toList() ??
       const <String>[],
   includes:
-      (json['includes'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      (json['includes'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const <String>[],
   excludes:
-      (json['excludes'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      (json['excludes'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+      const <String>[],
   termsAndConditions: json['termsAndConditions'] as String?,
   totalPax: (json['totalPax'] as num?)?.toInt(),
   reviews:

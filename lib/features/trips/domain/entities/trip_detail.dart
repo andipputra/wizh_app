@@ -9,8 +9,8 @@ class TripDetail {
   final TripType tripType;
   final String? summary;
   final List<String> photos;
-  final List<String>? includes;
-  final List<String>? excludes;
+  final List<String> includes;
+  final List<String> excludes;
   final String? termsAndConditions;
   final int? totalPax;
   final List<TripReview> reviews;
@@ -23,8 +23,8 @@ class TripDetail {
     required this.tripType,
     this.summary,
     required this.photos,
-    this.includes,
-    this.excludes,
+    required this.includes,
+    required this.excludes,
     this.termsAndConditions,
     this.totalPax,
     required this.reviews,

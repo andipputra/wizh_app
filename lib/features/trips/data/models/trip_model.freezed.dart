@@ -16,7 +16,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$TripModel {
 
- int get id; String get title; double get price; double get rating; TripType get tripType; String? get summary; List<String> get photos; List<String>? get includes; List<String>? get excludes; String? get termsAndConditions; int? get totalPax; List<Review> get reviews;
+ int get id; String get title; double get price; double get rating; TripType get tripType; String? get summary; List<String> get photos; List<String> get includes; List<String> get excludes; String? get termsAndConditions; int? get totalPax; List<Review> get reviews;
 /// Create a copy of TripModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -49,7 +49,7 @@ abstract mixin class $TripModelCopyWith<$Res>  {
   factory $TripModelCopyWith(TripModel value, $Res Function(TripModel) _then) = _$TripModelCopyWithImpl;
 @useResult
 $Res call({
- int id, String title, double price, double rating, TripType tripType, String? summary, List<String> photos, List<String>? includes, List<String>? excludes, String? termsAndConditions, int? totalPax, List<Review> reviews
+ int id, String title, double price, double rating, TripType tripType, String? summary, List<String> photos, List<String> includes, List<String> excludes, String? termsAndConditions, int? totalPax, List<Review> reviews
 });
 
 
@@ -66,7 +66,7 @@ class _$TripModelCopyWithImpl<$Res>
 
 /// Create a copy of TripModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? price = null,Object? rating = null,Object? tripType = null,Object? summary = freezed,Object? photos = null,Object? includes = freezed,Object? excludes = freezed,Object? termsAndConditions = freezed,Object? totalPax = freezed,Object? reviews = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? title = null,Object? price = null,Object? rating = null,Object? tripType = null,Object? summary = freezed,Object? photos = null,Object? includes = null,Object? excludes = null,Object? termsAndConditions = freezed,Object? totalPax = freezed,Object? reviews = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -75,9 +75,9 @@ as double,rating: null == rating ? _self.rating : rating // ignore: cast_nullabl
 as double,tripType: null == tripType ? _self.tripType : tripType // ignore: cast_nullable_to_non_nullable
 as TripType,summary: freezed == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
 as String?,photos: null == photos ? _self.photos : photos // ignore: cast_nullable_to_non_nullable
-as List<String>,includes: freezed == includes ? _self.includes : includes // ignore: cast_nullable_to_non_nullable
-as List<String>?,excludes: freezed == excludes ? _self.excludes : excludes // ignore: cast_nullable_to_non_nullable
-as List<String>?,termsAndConditions: freezed == termsAndConditions ? _self.termsAndConditions : termsAndConditions // ignore: cast_nullable_to_non_nullable
+as List<String>,includes: null == includes ? _self.includes : includes // ignore: cast_nullable_to_non_nullable
+as List<String>,excludes: null == excludes ? _self.excludes : excludes // ignore: cast_nullable_to_non_nullable
+as List<String>,termsAndConditions: freezed == termsAndConditions ? _self.termsAndConditions : termsAndConditions // ignore: cast_nullable_to_non_nullable
 as String?,totalPax: freezed == totalPax ? _self.totalPax : totalPax // ignore: cast_nullable_to_non_nullable
 as int?,reviews: null == reviews ? _self.reviews : reviews // ignore: cast_nullable_to_non_nullable
 as List<Review>,
@@ -91,7 +91,7 @@ as List<Review>,
 @JsonSerializable()
 
 class _TripModel extends TripModel {
-  const _TripModel({required this.id, required this.title, required this.price, required this.rating, required this.tripType, this.summary, final  List<String> photos = const <String>[], final  List<String>? includes, final  List<String>? excludes, this.termsAndConditions, this.totalPax, final  List<Review> reviews = const <Review>[]}): _photos = photos,_includes = includes,_excludes = excludes,_reviews = reviews,super._();
+  const _TripModel({required this.id, required this.title, required this.price, required this.rating, required this.tripType, this.summary, final  List<String> photos = const <String>[], final  List<String> includes = const <String>[], final  List<String> excludes = const <String>[], this.termsAndConditions, this.totalPax, final  List<Review> reviews = const <Review>[]}): _photos = photos,_includes = includes,_excludes = excludes,_reviews = reviews,super._();
   factory _TripModel.fromJson(Map<String, dynamic> json) => _$TripModelFromJson(json);
 
 @override final  int id;
@@ -107,22 +107,18 @@ class _TripModel extends TripModel {
   return EqualUnmodifiableListView(_photos);
 }
 
- final  List<String>? _includes;
-@override List<String>? get includes {
-  final value = _includes;
-  if (value == null) return null;
+ final  List<String> _includes;
+@override@JsonKey() List<String> get includes {
   if (_includes is EqualUnmodifiableListView) return _includes;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
+  return EqualUnmodifiableListView(_includes);
 }
 
- final  List<String>? _excludes;
-@override List<String>? get excludes {
-  final value = _excludes;
-  if (value == null) return null;
+ final  List<String> _excludes;
+@override@JsonKey() List<String> get excludes {
   if (_excludes is EqualUnmodifiableListView) return _excludes;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableListView(value);
+  return EqualUnmodifiableListView(_excludes);
 }
 
 @override final  String? termsAndConditions;
@@ -168,7 +164,7 @@ abstract mixin class _$TripModelCopyWith<$Res> implements $TripModelCopyWith<$Re
   factory _$TripModelCopyWith(_TripModel value, $Res Function(_TripModel) _then) = __$TripModelCopyWithImpl;
 @override @useResult
 $Res call({
- int id, String title, double price, double rating, TripType tripType, String? summary, List<String> photos, List<String>? includes, List<String>? excludes, String? termsAndConditions, int? totalPax, List<Review> reviews
+ int id, String title, double price, double rating, TripType tripType, String? summary, List<String> photos, List<String> includes, List<String> excludes, String? termsAndConditions, int? totalPax, List<Review> reviews
 });
 
 
@@ -185,7 +181,7 @@ class __$TripModelCopyWithImpl<$Res>
 
 /// Create a copy of TripModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? price = null,Object? rating = null,Object? tripType = null,Object? summary = freezed,Object? photos = null,Object? includes = freezed,Object? excludes = freezed,Object? termsAndConditions = freezed,Object? totalPax = freezed,Object? reviews = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? title = null,Object? price = null,Object? rating = null,Object? tripType = null,Object? summary = freezed,Object? photos = null,Object? includes = null,Object? excludes = null,Object? termsAndConditions = freezed,Object? totalPax = freezed,Object? reviews = null,}) {
   return _then(_TripModel(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as int,title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
@@ -194,9 +190,9 @@ as double,rating: null == rating ? _self.rating : rating // ignore: cast_nullabl
 as double,tripType: null == tripType ? _self.tripType : tripType // ignore: cast_nullable_to_non_nullable
 as TripType,summary: freezed == summary ? _self.summary : summary // ignore: cast_nullable_to_non_nullable
 as String?,photos: null == photos ? _self._photos : photos // ignore: cast_nullable_to_non_nullable
-as List<String>,includes: freezed == includes ? _self._includes : includes // ignore: cast_nullable_to_non_nullable
-as List<String>?,excludes: freezed == excludes ? _self._excludes : excludes // ignore: cast_nullable_to_non_nullable
-as List<String>?,termsAndConditions: freezed == termsAndConditions ? _self.termsAndConditions : termsAndConditions // ignore: cast_nullable_to_non_nullable
+as List<String>,includes: null == includes ? _self._includes : includes // ignore: cast_nullable_to_non_nullable
+as List<String>,excludes: null == excludes ? _self._excludes : excludes // ignore: cast_nullable_to_non_nullable
+as List<String>,termsAndConditions: freezed == termsAndConditions ? _self.termsAndConditions : termsAndConditions // ignore: cast_nullable_to_non_nullable
 as String?,totalPax: freezed == totalPax ? _self.totalPax : totalPax // ignore: cast_nullable_to_non_nullable
 as int?,reviews: null == reviews ? _self._reviews : reviews // ignore: cast_nullable_to_non_nullable
 as List<Review>,

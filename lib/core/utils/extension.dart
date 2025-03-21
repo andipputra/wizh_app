@@ -7,3 +7,7 @@ extension NumberX on num {
     decimalDigits: 0,
   ).format(this);
 }
+
+extension DateTimeX on DateTime {
+  String toDateShow() => DateFormat('dd MMM yyyy').format(this);
+}

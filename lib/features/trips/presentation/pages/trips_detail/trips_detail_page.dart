@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -24,49 +26,61 @@ class TripsDetailPage extends ConsumerStatefulWidget {
       _TripsDetailPageState();
 }
 
-class _TripsDetailPageState extends ConsumerState<TripsDetailPage> {
+class _TripsDetailPageState extends ConsumerState<TripsDetailPage>
+    with SingleTickerProviderStateMixin {
   final tabTitles = <String>[
     'Photos',
     'Summary',
     'Includes & Excludes',
-    'Rating & Review',
+    'Review',
     'Terms & Conditions',
     'Price & Pax',
   ];
   final sectionsKey = <GlobalKey>[];
 
   late ScrollController scrollController;
+  late TabController tabController;
 
   @override
   void initState() {
     super.initState();
 
-    scrollController = ScrollController()..addListener(animateToTab);
-
     for (final tab in tabTitles) {
       sectionsKey.add(GlobalKey(debugLabel: tab));
     }
+
+    tabController = TabController(length: sectionsKey.length, vsync: this);
+
+    scrollController = ScrollController();
+    scrollController.addListener(animateToTab);
   }
 
   @override
   void dispose() {
     super.dispose();
     scrollController.dispose();
+    tabController.dispose();
     sectionsKey.clear();
   }
 
   /// Animate To Tab
   void animateToTab() {
-    late RenderBox box;
-
+    log('[Putra] => access animateToTab');
     for (var i = 0; i < sectionsKey.length; i++) {
-      box = sectionsKey[i].currentContext?.findRenderObject() as RenderBox;
-      Offset position = box.localToGlobal(Offset.zero);
+      final box = sectionsKey[i].currentContext?.findRenderObject();
 
-      if (scrollController.offset >= position.dy) {
-        DefaultTabController.of(
-          context,
-        ).animateTo(i, duration: const Duration(milliseconds: 100));
+      if (box != null && box is RenderBox) {
+        Offset position = box.localToGlobal(Offset.zero);
+
+        if (scrollController.offset >= position.dy) {
+          tabController.animateTo(
+            i,
+            duration: const Duration(milliseconds: 100),
+          );
+          // DefaultTabController.of(
+          //   context,
+          // ).animateTo(i, duration: const Duration(milliseconds: 100));
+        }
       }
     }
   }
@@ -123,69 +137,79 @@ class _TripsDetailPageState extends ConsumerState<TripsDetailPage> {
                 ),
               ],
             ),
-            body: DefaultTabController(
-              length: tabTitles.length,
-              child: ClipRRect(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-                child: ColoredBox(
-                  color: Colors.white,
-                  child: CustomScrollView(
-                    slivers: [
-                      SliverToBoxAdapter(
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Text(
-                            tripData?.title ?? '',
-                            style: Theme.of(context).textTheme.headlineMedium
-                                ?.copyWith(fontWeight: FontWeight.bold),
-                          ),
+            body: ClipRRect(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+              child: ColoredBox(
+                color: Colors.white,
+                child: CustomScrollView(
+                  controller: scrollController,
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Text(
+                          tripData?.title ?? '',
+                          style: Theme.of(context).textTheme.headlineMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                       ),
-                      PinnedHeaderSliver(
-                        child: ColoredBox(
-                          color: Colors.white,
+                    ),
+                    PinnedHeaderSliver(
+                      child: ColoredBox(
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           child: TabBar(
+                            controller: tabController,
                             onTap: (value) => scrollToIndex(value),
                             isScrollable: true,
                             tabs:
                                 tabTitles
                                     .map((titles) => Tab(text: titles))
                                     .toList(),
+                            indicator: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              color: Theme.of(context).colorScheme.surface,
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            indicatorSize: TabBarIndicatorSize.tab,
+                            automaticIndicatorColorAdjustment: true,
+                            dividerHeight: 0,
                           ),
                         ),
                       ),
-                      for (final section in tabTitles)
-                        SliverToBoxAdapter(
-                          key: sectionsKey[tabTitles.indexOf(section)],
-                          child: Column(
-                            spacing: 8,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 16),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16),
-                                child: Text(
-                                  section,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineSmall
-                                      ?.copyWith(fontWeight: FontWeight.bold),
-                                ),
+                    ),
+                    for (final section in tabTitles)
+                      SliverToBoxAdapter(
+                        child: Column(
+                          spacing: 8,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 16),
+                            Padding(
+                              key: sectionsKey[tabTitles.indexOf(section)],
+                              padding: EdgeInsets.symmetric(horizontal: 16),
+                              child: Text(
+                                section,
+                                style: Theme.of(context).textTheme.headlineSmall
+                                    ?.copyWith(fontWeight: FontWeight.bold),
                               ),
-                              if (controller.isLoading)
-                                const Skeletonizer(
-                                  child: AspectRatio(
-                                    aspectRatio: 16 / 9,
-                                    child: ColoredBox(color: Colors.black),
-                                  ),
-                                )
-                              else
-                                _getSection(section, tripData),
-                            ],
-                          ),
+                            ),
+                            if (controller.isLoading)
+                              const Skeletonizer(
+                                child: AspectRatio(
+                                  aspectRatio: 16 / 9,
+                                  child: ColoredBox(color: Colors.black),
+                                ),
+                              )
+                            else
+                              _getSection(section, tripData),
+                          ],
                         ),
-                    ],
-                  ),
+                      ),
+
+                    SliverToBoxAdapter(child: SizedBox(height: 32)),
+                  ],
                 ),
               ),
             ),
@@ -199,10 +223,21 @@ class _TripsDetailPageState extends ConsumerState<TripsDetailPage> {
       switch (section) {
         'Photos' => TripsDetailImage(trip: widget.trip),
         'Summary' => TripsDetailSummary(summary: tripDetail?.summary ?? ''),
-        'Includes & Excludes' => TripsDetailIncludesExcludes(),
-        'Rating & Review' => TripsDetailRatingReview(),
-        'Terms & Conditions' => TripsDetailTnc(),
-        'Price & Pax' => TripsDetailPriceAndPax(),
+        'Includes & Excludes' => TripsDetailIncludesExcludes(
+          excludes: tripDetail?.excludes ?? [],
+          includes: tripDetail?.includes ?? [],
+        ),
+        'Review' => TripsDetailRatingReview(
+          rating: tripDetail?.rating ?? 0,
+          reviews: tripDetail?.reviews ?? [],
+        ),
+        'Terms & Conditions' => TripsDetailTnc(
+          tnc: tripDetail?.termsAndConditions ?? '',
+        ),
+        'Price & Pax' => TripsDetailPriceAndPax(
+          price: tripDetail?.price ?? 0,
+          totalPax: tripDetail?.totalPax ?? 0,
+        ),
         _ => Container(),
       };
 }
