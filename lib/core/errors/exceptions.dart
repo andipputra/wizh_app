@@ -1,6 +1,6 @@
 // core/errors/exceptions.dart
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:whiz_trips/core/errors/failure.dart';
+import 'package:wizh_trips/core/errors/failure.dart';
 
 part 'exceptions.freezed.dart';
 

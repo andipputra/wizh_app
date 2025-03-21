@@ -1,9 +1,9 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:whiz_trips/core/errors/failure.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_detail.dart';
-import 'package:whiz_trips/features/trips/domain/usecase/get_trip_detail.dart';
+import 'package:wizh_trips/core/errors/failure.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_detail.dart';
+import 'package:wizh_trips/features/trips/domain/usecase/get_trip_detail.dart';
 
 part 'trips_detail_controller.g.dart';
 

@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "whiz_trips",
+            "name": "wizh_trips",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "whiz_trips (profile mode)",
+            "name": "wizh_trips (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "whiz_trips (release mode)",
+            "name": "wizh_trips (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
 
 part 'trips_carousel_state.freezed.dart';
 

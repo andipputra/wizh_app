@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whiz_trips/core/utils/extension.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_review.dart';
+import 'package:wizh_trips/core/utils/extension.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_review.dart';
 
 class TripsDetailReviewItems extends StatelessWidget {
   const TripsDetailReviewItems({super.key, required this.review});

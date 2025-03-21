@@ -1,7 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_controller.dart';
-import 'package:whiz_trips/features/trips/presentation/state/trips_carousel_state.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_controller.dart';
+import 'package:wizh_trips/features/trips/presentation/state/trips_carousel_state.dart';
 
 part 'trips_carousel_controller.g.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_detail_image_controller.dart';
-import 'package:whiz_trips/widgets/image_from_network.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_detail_image_controller.dart';
+import 'package:wizh_trips/widgets/image_from_network.dart';
 
 class TripsDetailImage extends ConsumerWidget {
   const TripsDetailImage({super.key, required this.trip});

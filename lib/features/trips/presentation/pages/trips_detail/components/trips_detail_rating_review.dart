@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_review.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_review_items.dart';
-import 'package:whiz_trips/widgets/five_stars.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_review.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_review_items.dart';
+import 'package:wizh_trips/widgets/five_stars.dart';
 
 class TripsDetailRatingReview extends StatelessWidget {
   const TripsDetailRatingReview({

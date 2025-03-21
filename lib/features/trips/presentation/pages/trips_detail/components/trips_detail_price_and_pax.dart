@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whiz_trips/core/utils/extension.dart';
+import 'package:wizh_trips/core/utils/extension.dart';
 
 class TripsDetailPriceAndPax extends StatelessWidget {
   const TripsDetailPriceAndPax({

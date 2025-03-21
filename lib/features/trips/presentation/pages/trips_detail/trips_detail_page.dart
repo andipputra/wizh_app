@@ -3,17 +3,17 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_detail.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_detail_controller.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_detail.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_detail_controller.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_image.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_includes_excludes.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_price_and_pax.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_rating_review.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_summary.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_tnc.dart';
-import 'package:whiz_trips/widgets/image_from_network.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_image.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_includes_excludes.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_price_and_pax.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_rating_review.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_summary.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/components/trips_detail_tnc.dart';
+import 'package:wizh_trips/widgets/image_from_network.dart';
 
 @RoutePage()
 class TripsDetailPage extends ConsumerStatefulWidget {

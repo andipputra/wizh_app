@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips/components/trips_list_item.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips/components/trips_list_item.dart';
 
 class TripsList extends StatelessWidget {
   const TripsList({super.key, required this.isLoading, required this.trips});

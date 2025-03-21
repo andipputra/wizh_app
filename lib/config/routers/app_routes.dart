@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:whiz_trips/config/routers/app_routes.gr.dart';
+import 'package:wizh_trips/config/routers/app_routes.gr.dart';
 
 @AutoRouterConfig()
 class AppRouter extends RootStackRouter {

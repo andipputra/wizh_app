@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:flutter/services.dart';
-import 'package:whiz_trips/core/errors/exceptions.dart';
-import 'package:whiz_trips/features/trips/data/models/trip_model.dart';
+import 'package:wizh_trips/core/errors/exceptions.dart';
+import 'package:wizh_trips/features/trips/data/models/trip_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

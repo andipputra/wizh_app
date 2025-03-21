@@ -1,4 +1,4 @@
-import 'package:whiz_trips/features/trips/domain/enum/trip_type.dart';
+import 'package:wizh_trips/features/trips/domain/enum/trip_type.dart';
 
 class Trip {
   final int id;

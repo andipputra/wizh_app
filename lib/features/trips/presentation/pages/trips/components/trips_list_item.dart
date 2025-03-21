@@ -2,10 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:whiz_trips/config/routers/app_routes.gr.dart';
-import 'package:whiz_trips/core/utils/extension.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/widgets/five_stars.dart';
+import 'package:wizh_trips/config/routers/app_routes.gr.dart';
+import 'package:wizh_trips/core/utils/extension.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/widgets/five_stars.dart';
 
 class TripsListItem extends StatelessWidget {
   const TripsListItem({super.key, required this.trip});

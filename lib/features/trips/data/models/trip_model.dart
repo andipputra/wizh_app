@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_detail.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip_review.dart';
-import 'package:whiz_trips/features/trips/domain/enum/trip_type.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_detail.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_review.dart';
+import 'package:wizh_trips/features/trips/domain/enum/trip_type.dart';
 
 part 'trip_model.freezed.dart';
 part 'trip_model.g.dart';

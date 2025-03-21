@@ -3,11 +3,11 @@ import 'dart:developer';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart';
-import 'package:whiz_trips/features/trips/domain/enum/trip_type.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_controller.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips/components/trips_carousel.dart';
-import 'package:whiz_trips/features/trips/presentation/pages/trips/components/trips_list.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart';
+import 'package:wizh_trips/features/trips/domain/enum/trip_type.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_controller.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips/components/trips_carousel.dart';
+import 'package:wizh_trips/features/trips/presentation/pages/trips/components/trips_list.dart';
 
 @RoutePage()
 class TripsPage extends ConsumerWidget {

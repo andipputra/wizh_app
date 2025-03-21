@@ -1,4 +1,4 @@
-# whiz_trips
+# wizh_trips
 
 A new Flutter project.
 

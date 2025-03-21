@@ -1,5 +1,5 @@
-import 'package:whiz_trips/features/trips/domain/entities/trip_review.dart';
-import 'package:whiz_trips/features/trips/domain/enum/trip_type.dart';
+import 'package:wizh_trips/features/trips/domain/entities/trip_review.dart';
+import 'package:wizh_trips/features/trips/domain/enum/trip_type.dart';
 
 class TripDetail {
   final int id;

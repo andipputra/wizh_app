@@ -11,10 +11,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i3;
 import 'package:flutter/material.dart' as _i4;
-import 'package:whiz_trips/features/trips/domain/entities/trip.dart' as _i5;
-import 'package:whiz_trips/features/trips/presentation/pages/trips/trips_page.dart'
+import 'package:wizh_trips/features/trips/domain/entities/trip.dart' as _i5;
+import 'package:wizh_trips/features/trips/presentation/pages/trips/trips_page.dart'
     as _i2;
-import 'package:whiz_trips/features/trips/presentation/pages/trips_detail/trips_detail_page.dart'
+import 'package:wizh_trips/features/trips/presentation/pages/trips_detail/trips_detail_page.dart'
     as _i1;
 
 /// generated route for

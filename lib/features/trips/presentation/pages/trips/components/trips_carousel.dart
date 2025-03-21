@@ -2,9 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:whiz_trips/config/routers/app_routes.gr.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_carousel_controller.dart';
-import 'package:whiz_trips/features/trips/presentation/controllers/trips_controller.dart';
+import 'package:wizh_trips/config/routers/app_routes.gr.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_carousel_controller.dart';
+import 'package:wizh_trips/features/trips/presentation/controllers/trips_controller.dart';
 
 class TripsCarousel extends ConsumerWidget {
   const TripsCarousel({super.key});
