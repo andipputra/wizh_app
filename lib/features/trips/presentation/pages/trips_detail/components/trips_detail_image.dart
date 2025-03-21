@@ -97,7 +97,7 @@ class TripsDetailImage extends ConsumerWidget {
                       border:
                           controller.currentIndex == index
                               ? Border.all(
-                                color: Theme.of(context).colorScheme.primary,
+                                color: Theme.of(context).colorScheme.primaryContainer,
                                 width: 4,
                               )
                               : null,

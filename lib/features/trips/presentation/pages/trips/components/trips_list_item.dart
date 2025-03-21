@@ -19,6 +19,7 @@ class TripsListItem extends StatelessWidget {
         onTap: () => context.pushRoute(TripsDetailRoute(trip: trip)),
         child: Card(
           elevation: 2,
+          color: Colors.grey.shade100,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -36,7 +37,8 @@ class TripsListItem extends StatelessWidget {
                             (context, url) => Skeletonizer(
                               child: ColoredBox(color: Colors.black),
                             ),
-                        errorWidget: (context, url, error) => Skeletonizer(
+                        errorWidget:
+                            (context, url, error) => Skeletonizer(
                               child: ColoredBox(color: Colors.black),
                             ),
                         fit: BoxFit.cover,

@@ -21,7 +21,10 @@ class TripsList extends StatelessWidget {
           children: [
             Text(
               'Trips List',
-              style: Theme.of(context).textTheme.headlineSmall,
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Theme.of(context).colorScheme.primary,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             GridView.builder(
               shrinkWrap: true,
@@ -33,7 +36,7 @@ class TripsList extends StatelessWidget {
                 crossAxisSpacing: 8,
               ),
               itemBuilder:
-                  (context, index) => TripsListItem(trip: trips[index],),
+                  (context, index) => TripsListItem(trip: trips[index]),
               itemCount: trips.length,
             ),
           ],

@@ -20,9 +20,10 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'wizh Trips',
+      title: 'Wizh Trips',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
+        scaffoldBackgroundColor: Colors.grey.shade200,
+        colorScheme: ColorScheme.fromSeed(seedColor: Color(0XFFD2AD79)),
         appBarTheme: AppBarTheme(),
       ),
       routerDelegate: AutoRouterDelegate(_appRoute),

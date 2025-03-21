@@ -41,7 +41,9 @@ class TripsCarousel extends ConsumerWidget {
               final currentTrips = tripsCarouselController.trips[index];
 
               return InkWell(
-                onTap: () => context.pushRoute(TripsDetailRoute(trip: currentTrips)),
+                onTap:
+                    () =>
+                        context.pushRoute(TripsDetailRoute(trip: currentTrips)),
                 child: Container(
                   margin: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
@@ -58,10 +60,12 @@ class TripsCarousel extends ConsumerWidget {
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Colors.white.withAlpha(100),
-                          Colors.white.withAlpha(90),
-                          Colors.white.withAlpha(80),
-                          Colors.white.withAlpha(70),
+                          Colors.transparent,
+                          Colors.black12,
+                          Colors.black38,
+                          Colors.black38,
+                          Colors.black12,
+                          Colors.transparent,
                         ],
                         end: Alignment.topCenter,
                         begin: Alignment.bottomCenter,
@@ -69,9 +73,11 @@ class TripsCarousel extends ConsumerWidget {
                     ),
                     child: Text(
                       currentTrips.title,
-                      style: TextTheme.of(
-                        context,
-                      ).labelLarge?.copyWith(fontWeight: FontWeight.bold),
+                      style: TextTheme.of(context).labelLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        letterSpacing: 4,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -96,7 +102,10 @@ class TripsCarousel extends ConsumerWidget {
                 height: 8,
                 width: currentIndex == i ? 24 : 8,
                 decoration: BoxDecoration(
-                  color: currentIndex == i ? Colors.black : Colors.grey,
+                  color:
+                      currentIndex == i
+                          ? Theme.of(context).colorScheme.secondary
+                          : Colors.grey,
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),

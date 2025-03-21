@@ -10,6 +10,12 @@ class TripsDetailReviewItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Theme.of(context).colorScheme.onPrimary,
+      borderOnForeground: true,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: BorderSide(color: Theme.of(context).colorScheme.primary),
+      ),
       margin: EdgeInsets.all(16),
       child: Padding(
         padding: const EdgeInsets.all(16),
