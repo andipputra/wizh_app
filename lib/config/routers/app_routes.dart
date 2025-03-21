@@ -6,6 +6,9 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: TripsRoute.page, initial: true),
-    AutoRoute(page: TripsDetailRoute.page,),
+    CustomRoute(
+      page: TripsDetailRoute.page,
+      transitionsBuilder: TransitionsBuilders.slideLeftWithFade,
+    ),
   ];
 }
