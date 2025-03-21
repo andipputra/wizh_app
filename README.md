@@ -3,10 +3,10 @@
 A new Flutter project for Wizh 
 
 ## Package that used
-### state management: Riverpod
-### Routing: Auto Route
-### Data Class: Freezed
-### Loader: Skeletonizer
+- state management: Riverpod
+- Routing: Auto Route
+- Data Class: Freezed
+- Loader: Skeletonizer
 
 ## Getting Started
 For running this project please do
